@@ -19,8 +19,7 @@ public class MouseLook : MonoBehaviour {
 	Quaternion originalRotation;
 
 	void Update() {
-		if (axes == RotationAxes.MouseXAndY)
-		{
+		if (axes == RotationAxes.MouseXAndY) {
 			RotX += Input.GetAxis("Mouse X") * XSensitivity;
 			RotY += Input.GetAxis("Mouse Y") * YSensitivity;
 
@@ -32,16 +31,16 @@ public class MouseLook : MonoBehaviour {
 
 			transform.localRotation = originalRotation * xQuaternion * yQuaternion;
 		}
-		else if (axes == RotationAxes.MouseX)
-		{
+
+		else if (axes == RotationAxes.MouseX) {
 			RotX += Input.GetAxis("Mouse X") * XSensitivity;
 			RotX = Mathf.Clamp (RotX, MinimumX, MaximumX);
 
 			Quaternion xQuaternion = Quaternion.AngleAxis (RotX, Vector3.up);
 			transform.localRotation = originalRotation * xQuaternion;
 		}
-		else
-		{
+
+		else {
 			RotY += Input.GetAxis("Mouse Y") * YSensitivity;
 			RotY = Mathf.Clamp (RotY, MinimumY, MaximumY);
 
@@ -50,8 +49,7 @@ public class MouseLook : MonoBehaviour {
 		}
 	}
 	
-	void Start ()
-	{
+	void Start () {
 		if (GetComponent<Rigidbody> ())
 			GetComponent<Rigidbody>().freezeRotation = true;
 			originalRotation = transform.localRotation;
