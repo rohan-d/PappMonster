@@ -7,10 +7,12 @@ public class EnemyHealth : MonoBehaviour {
 	public int currentHealth;
 	public float sinkSpeed = 2.5f;
 	public int scoreValue = 100;
+	CapsuleCollider capsuleCollider;
 	bool isDead;
 	bool isSinking;
 
 	void Awake () {
+		capsuleCollider = GetComponent <CapsuleCollider> ();
 		currentHealth = StartingHealth;
 	}
 
@@ -35,6 +37,7 @@ public class EnemyHealth : MonoBehaviour {
 	void Death () {
 
 		isDead = true;
+		capsuleCollider.isTrigger = true;
 	}
 
 	public void StartSinking () {
