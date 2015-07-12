@@ -25,19 +25,24 @@ public class EnemyHealth : MonoBehaviour {
 
 	public void TakeDamage (int amount, Vector3 hitPoint) {
 
-			if(isDead) 
-				return;
-				currentHealth -= amount;
+		if (isDead) {
+			return;
+		}
+			
+			currentHealth -= amount;
+//	 		print ("Damage Taken");
 
-				if(currentHealth <= 0) {
-					Death ();
-				}
+		if(currentHealth <= 0) {
+			Death ();
+//			print ("dead");
+		}
 	}
 
 	void Death () {
 
 		isDead = true;
 		capsuleCollider.isTrigger = true;
+		StartSinking ();
 	}
 
 	public void StartSinking () {
@@ -45,6 +50,7 @@ public class EnemyHealth : MonoBehaviour {
 		isSinking = true;
 //		ScoreManager.score += scoreValue;
 		Destroy (gameObject, 2f);
+		print ("sink");
 	}
 }
 	

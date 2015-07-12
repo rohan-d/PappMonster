@@ -10,17 +10,19 @@ public class PlayerShooting : MonoBehaviour {
 	float timer;
 	Ray shootRay;
 	RaycastHit shootHit;
-	int shootableMask;
+	//int shootableMask;
 	LineRenderer gunLine;
 	Light gunLight;
 	float effectsDisplayTime = 0.2f;
 	
 	void Awake () {
 
-		shootableMask = LayerMask.GetMask ("Shootable");
+		//shootableMask = LayerMask.GetMask ("Shootable");
 
 		gunLine = GetComponent <LineRenderer> ();
 		gunLight = GetComponent <Light> ();
+
+		Screen.lockCursor = false;
 	}
 
 	void Update () {
@@ -51,15 +53,19 @@ public class PlayerShooting : MonoBehaviour {
 		shootRay.origin = transform.position;
 		shootRay.direction = transform.forward;
 
-		if (Physics.Raycast (shootRay, out shootHit, range, shootableMask)) {
+		if (Physics.Raycast (shootRay, out shootHit, range/*, shootableMask*/)) {
+
 			EnemyHealth enemyHealth = shootHit.collider.GetComponent <EnemyHealth> ();
 
 			if (enemyHealth != null) {
 				enemyHealth.TakeDamage (damagePerShot, shootHit.point);
+//				print ("enemy shot");
 			}
 			gunLine.SetPosition (1, shootHit.point);
+		}
 
-		} else {
+		else {
+//			print ("shoot else");
 			gunLine.SetPosition (1, shootRay.origin + shootRay.direction * range);
 		}
 	}
