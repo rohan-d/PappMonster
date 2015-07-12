@@ -48,7 +48,7 @@ public class EnemyHealth : MonoBehaviour {
 	public void StartSinking () {
 		GetComponent <Rigidbody> ().isKinematic = true;
 		isSinking = true;
-//		ScoreManager.score += scoreValue;
+		ScoreManager.score += scoreValue;
 		Destroy (gameObject, 2f);
 		print ("sink");
 	}

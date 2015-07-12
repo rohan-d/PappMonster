@@ -10,6 +10,7 @@ public class PlayerShooting : MonoBehaviour {
 	float timer;
 	Ray shootRay;
 	RaycastHit shootHit;
+	AudioSource gunAudio;
 	//int shootableMask;
 	LineRenderer gunLine;
 	Light gunLight;
@@ -21,6 +22,7 @@ public class PlayerShooting : MonoBehaviour {
 
 		gunLine = GetComponent <LineRenderer> ();
 		gunLight = GetComponent <Light> ();
+		gunAudio = GetComponent<AudioSource> ();
 
 		Screen.lockCursor = false;
 	}
@@ -46,6 +48,7 @@ public class PlayerShooting : MonoBehaviour {
 	void Shoot () {
 
 		timer = 0f;
+		gunAudio.Play ();
 		gunLight.enabled = true;
 		gunLine.enabled = true;
 		gunLine.SetPosition (0, transform.position);
