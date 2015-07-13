@@ -48,12 +48,15 @@
   <ItemGroup>
      <Compile Include="Assets\CameraMovement.cs" />
      <Compile Include="Assets\EnemyHealth.cs" />
+     <Compile Include="Assets\EnemyManager.cs" />
      <Compile Include="Assets\EnemyScript.cs" />
+     <Compile Include="Assets\GameOverManager.cs" />
      <Compile Include="Assets\MouseLook.cs" />
      <Compile Include="Assets\PlayerMovementWASD.cs" />
      <Compile Include="Assets\PlayerShooting.cs" />
      <Compile Include="Assets\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Timer.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
