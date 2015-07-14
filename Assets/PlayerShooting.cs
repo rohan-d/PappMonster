@@ -11,14 +11,11 @@ public class PlayerShooting : MonoBehaviour {
 	Ray shootRay;
 	RaycastHit shootHit;
 	AudioSource gunAudio;
-	//int shootableMask;
 	LineRenderer gunLine;
 	Light gunLight;
 	float effectsDisplayTime = 0.2f;
 	
 	void Awake () {
-
-		//shootableMask = LayerMask.GetMask ("Shootable");
 
 		gunLine = GetComponent <LineRenderer> ();
 		gunLight = GetComponent <Light> ();
@@ -56,7 +53,7 @@ public class PlayerShooting : MonoBehaviour {
 		shootRay.origin = transform.position;
 		shootRay.direction = transform.forward;
 
-		if (Physics.Raycast (shootRay, out shootHit, range/*, shootableMask*/)) {
+		if (Physics.Raycast (shootRay, out shootHit, range)) {
 
 			EnemyHealth enemyHealth = shootHit.collider.GetComponent <EnemyHealth> ();
 

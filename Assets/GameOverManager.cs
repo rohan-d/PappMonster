@@ -1,27 +1,34 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
 
 public class GameOverManager : MonoBehaviour
 {
+	Animator anim;
+	private bool restart;
+	public GameObject shootingScript;
 
-	public float restartDelay = 600;
-	float restartTimer = 0; 
-	Animator anim;                         
-	
-	void Awake ()
-	{
+	void Awake () {
+
 		anim = GetComponent <Animator> ();
+		restart = false;
+
 	}
 
-	void Update ()
-	{
+	void Update () {
 
 		if(Timer.timeRemaining <= 0) {
 
 			anim.SetTrigger ("GameOver");
-			restartTimer ++;
+			shootingScript.GetComponent<PlayerShooting>().enabled = false;
+			restart = true;
 
-			if(restartTimer >= restartDelay) {
-				Application.LoadLevel(Application.loadedLevel);
+			if(restart) {
+				if (Input.GetKeyDown (KeyCode.R)) {
+					shootingScript.GetComponent<PlayerShooting>().enabled = true;
+					Timer.timeRemaining = 51;
+					Application.LoadLevel(Application.loadedLevel);
+				}
 			}
 		}
 	}

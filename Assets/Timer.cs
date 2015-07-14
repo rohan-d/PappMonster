@@ -4,11 +4,11 @@ using System.Collections;
 
 public class Timer : MonoBehaviour {
 
-	public static int timeRemaining = 30;
+	public static int timeRemaining = 11;
 	Animator anim;
 	Text text;
 	
-	void Start () {
+	void Awake () {
 		text = GetComponent <Text> ();
 		InvokeRepeating ("decreaseTimeRemaining", 0, 1);
 	}
@@ -18,10 +18,6 @@ public class Timer : MonoBehaviour {
 		if (timeRemaining > -1) {
 			text.text = "" + timeRemaining;
 		}
-//		if (timeRemaining == 0) {
-//			anim.SetTrigger ("GameOver");
-//		}
-//		text.text = "" + timeRemaining;
 	}
 
 	void decreaseTimeRemaining() {
