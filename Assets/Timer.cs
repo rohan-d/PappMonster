@@ -4,7 +4,7 @@ using System.Collections;
 
 public class Timer : MonoBehaviour {
 
-	public static int timeRemaining = 11;
+	public static int timeRemaining = 51;
 	Animator anim;
 	Text text;
 	

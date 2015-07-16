@@ -3,10 +3,10 @@ using System.Collections;
 
 public class EnemyHealth : MonoBehaviour {
 
-	public int StartingHealth = 100;
+	public int StartingHealth = 250;
 	public int currentHealth;
-	public float sinkSpeed = 3f;
-	public int scoreValue = 100;
+	public float sinkSpeed = 5f;
+	public int scoreValue = 350;
 	public AudioClip deathClip;
 	AudioSource enemyAudio;
 	CapsuleCollider capsuleCollider;
@@ -34,11 +34,9 @@ public class EnemyHealth : MonoBehaviour {
 
 		currentHealth -= amount;
 		enemyAudio.Play ();
-//	 		print ("Damage Taken");
 
 		if(currentHealth <= 0) {
 			Death ();
-//			print ("dead");
 		}
 	}
 
@@ -56,7 +54,6 @@ public class EnemyHealth : MonoBehaviour {
 		isSinking = true;
 		ScoreManager.score += scoreValue;	
 		Destroy (gameObject, 1.2f);
-//		print ("sink");
 	}
 }
 	

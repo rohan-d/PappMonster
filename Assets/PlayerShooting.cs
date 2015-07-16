@@ -6,6 +6,8 @@ public class PlayerShooting : MonoBehaviour {
 	public int damagePerShot = 20;
 	public float timeBetweenBullets = 0.2f;
 	public float range = 100f;
+//	Animator scoreAnimation;
+//	bool score = false;
 
 	float timer;
 	Ray shootRay;
@@ -20,6 +22,7 @@ public class PlayerShooting : MonoBehaviour {
 		gunLine = GetComponent <LineRenderer> ();
 		gunLight = GetComponent <Light> ();
 		gunAudio = GetComponent<AudioSource> ();
+//		scoreAnimation = GetComponent <Animator> ();
 
 		Screen.lockCursor = false;
 	}
@@ -59,13 +62,16 @@ public class PlayerShooting : MonoBehaviour {
 
 			if (enemyHealth != null) {
 				enemyHealth.TakeDamage (damagePerShot, shootHit.point);
-//				print ("enemy shot");
+//				score = true;
+//				if (score) {
+//					scoreAnimation.SetTrigger ("Score");
+//					score = false;
+//				}
 			}
 			gunLine.SetPosition (1, shootHit.point);
 		}
 
 		else {
-//			print ("shoot else");
 			gunLine.SetPosition (1, shootRay.origin + shootRay.direction * range);
 		}
 	}

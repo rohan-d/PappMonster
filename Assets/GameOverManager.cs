@@ -12,7 +12,6 @@ public class GameOverManager : MonoBehaviour
 
 		anim = GetComponent <Animator> ();
 		restart = false;
-
 	}
 
 	void Update () {

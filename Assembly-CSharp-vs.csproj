@@ -50,6 +50,7 @@
      <Compile Include="Assets\EnemyHealth.cs" />
      <Compile Include="Assets\EnemyManager.cs" />
      <Compile Include="Assets\EnemyScript.cs" />
+     <Compile Include="Assets\FootStepper.cs" />
      <Compile Include="Assets\GameOverManager.cs" />
      <Compile Include="Assets\MouseLook.cs" />
      <Compile Include="Assets\PlayerMovementWASD.cs" />
