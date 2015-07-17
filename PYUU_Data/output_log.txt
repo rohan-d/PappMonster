@@ -18,7 +18,7 @@ Platform assembly: C:\Users\Shogo999\Documents\GitHub\PappMonster\PYUU_Data\Mana
 Loading C:\Users\Shogo999\Documents\GitHub\PappMonster\PYUU_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\Shogo999\Documents\GitHub\PappMonster\PYUU_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\Shogo999\Documents\GitHub\PappMonster\PYUU_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.072 seconds
+- Completed reload, in  0.127 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -26,10 +26,10 @@ desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 Platform assembly: C:\Users\Shogo999\Documents\GitHub\PappMonster\PYUU_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Shogo999\Documents\GitHub\PappMonster\PYUU_Data\Managed\System.dll (this message is harmless)
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1e4 -> priority: 1 
+  Thread -> id: cb0 -> priority: 1 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 8.002530 ms
+UnloadTime: 9.110564 ms
 
 Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 282.
-Total: 0.489071 ms (FindLiveObjects: 0.028734 ms CreateObjectMapping: 0.041635 ms MarkObjects: 0.379997 ms  DeleteObjects: 0.036944 ms)
+Total: 0.558854 ms (FindLiveObjects: 0.033718 ms CreateObjectMapping: 0.046913 ms MarkObjects: 0.429843 ms  DeleteObjects: 0.046620 ms)
 
