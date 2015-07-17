@@ -1,7 +1,9 @@
+git add -f PYUU.exe
+!PYUU.exe
+
 # =============== #
 # Unity generated #
 # =============== #
-!PYUU.exe
 Temp/
 Obj/
 UnityGenerated/
