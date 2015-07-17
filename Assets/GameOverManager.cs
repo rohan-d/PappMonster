@@ -7,6 +7,7 @@ public class GameOverManager : MonoBehaviour
 	Animator anim;
 	private bool restart;
 	public GameObject shootingScript;
+	public string loadingScreen = "StartScreen";
 
 	void Awake () {
 
@@ -28,7 +29,12 @@ public class GameOverManager : MonoBehaviour
 					Timer.timeRemaining = 51;
 					Application.LoadLevel(Application.loadedLevel);
 				}
+				if (Input.GetKeyDown (KeyCode.L)) {
+					shootingScript.GetComponent<PlayerShooting>().enabled = true;
+					Timer.timeRemaining = 51;
+					Application.LoadLevel(loadingScreen);
+				}
 			}
 		}
 	}
-}	
+}

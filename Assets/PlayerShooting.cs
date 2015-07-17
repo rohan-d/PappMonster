@@ -24,7 +24,7 @@ public class PlayerShooting : MonoBehaviour {
 		gunAudio = GetComponent<AudioSource> ();
 //		scoreAnimation = GetComponent <Animator> ();
 
-		Screen.lockCursor = false;
+		Screen.lockCursor = true;
 	}
 
 	void Update () {
