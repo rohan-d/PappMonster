@@ -32,6 +32,7 @@ public class GameOverManager : MonoBehaviour
 				if (Input.GetKeyDown (KeyCode.L)) {
 					shootingScript.GetComponent<PlayerShooting>().enabled = true;
 					Timer.timeRemaining = 51;
+					Screen.lockCursor = false;
 					Application.LoadLevel(loadingScreen);
 				}
 			}
