@@ -3,11 +3,11 @@ GameDev SS15_Project
 
 >>>>> Starting The Game <<<<<
 
-Just open/run PYUU.exe. :)
+Just open/run PYUU.exe in PappMonster-FPController>PappMonsterFPController. :D
 
 In Unity: 
-Open the project folder PappMonster and load the scene 'IntroScene'. 
-Then press the play button.
+Open the project folder (PappMonster-FPController>PappMonster-FPController) and load the scene 'IntroScene'. 
+Then press the play button in Unity.
 
 
 
